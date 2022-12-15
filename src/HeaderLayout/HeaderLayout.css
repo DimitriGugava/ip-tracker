@@ -1,7 +1,9 @@
 .HeaderLayoutContainer {
+  position: relative;
   height: 828px;
   width: 375px;
   margin: auto;
+  z-index: 4;
 }
 
 .blueBackground {

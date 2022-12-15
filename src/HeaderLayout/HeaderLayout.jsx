@@ -1,6 +1,7 @@
 import "./HeaderLayout.css";
 import bluebackground from "../icons/bluebackground.svg";
 import arrow from "../icons/arrow.svg";
+import Map from "../HeaderLayout/map/map";
 
 const HeaderLayout = () => {
   return (
@@ -31,6 +32,7 @@ const HeaderLayout = () => {
           <div className="mapinfo">192.212.174.101</div>
         </div>
       </div>
+      <Map />
     </div>
   );
 };
