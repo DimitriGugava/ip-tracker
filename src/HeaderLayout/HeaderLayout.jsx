@@ -9,6 +9,10 @@ import { useQuery } from "react-query";
 const HeaderLayout = () => {
   const [address, setAddress] = useState("");
   const [inputIp, setInputIp] = useState(null);
+  const checkIpAddress =
+    /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
+  const checkDomain =
+    /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
 
   const getInfo = (e) => {
     setAddress(e.target.value);
@@ -17,7 +21,13 @@ const HeaderLayout = () => {
   const fetchData = () => {
     axios
       .get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_aMtk35qDqi4sbvhno2Jg4YV1LX1te&ipAddress=8.8.8.8`
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_aMtk35qDqi4sbvhno2Jg4YV1LX1te&${
+          checkIpAddress.test(address)
+            ? `address=${address}`
+            : checkDomain.test(address)
+            ? `domain=${address}`
+            : " "
+        }`
       )
       .then((res) => {
         setInputIp(res.data);
@@ -56,7 +66,7 @@ const HeaderLayout = () => {
           <div className="mapinfo">{inputIp?.isp}</div>
         </div>
       </div>
-      <Map />
+      <Map address={address} />
     </div>
   );
 };
