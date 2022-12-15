@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "./map.css";
+
 const Map = () => {
   return (
     <MapContainer
@@ -15,7 +16,7 @@ const Map = () => {
       />
       <Marker position={[51.505, -0.09]}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          A pretty CSS3 popup <br /> Easily customizable.
         </Popup>
       </Marker>
     </MapContainer>
