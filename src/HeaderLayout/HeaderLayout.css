@@ -1,0 +1,107 @@
+.HeaderLayoutContainer {
+  height: 828px;
+  width: 375px;
+  margin: auto;
+}
+
+.blueBackground {
+  position: absolute;
+  height: 300px;
+  width: 375px;
+  z-index: -1;
+}
+
+.headerTiTle {
+  height: 30px;
+  width: 229px;
+  font-family: "Rubik";
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.2321428507566452px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin: 20px auto;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  height: 58px;
+  width: 327px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+  margin: 29px auto;
+}
+.inputOfAddress {
+  height: 50px;
+  width: 280px;
+  border-radius: 15px;
+  border-style: none;
+  font-family: "Rubik";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(44, 44, 44, 1);
+}
+.inputOfAddress:focus {
+  outline: none;
+}
+
+.inputButton {
+  height: 58px;
+  width: 58px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 0px 15px 15px 0px;
+}
+
+.inputButton:hover {
+  cursor: pointer;
+  background: rgb(40, 40, 40);
+}
+
+.mapinfodisplaybox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 294px;
+  width: 327px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+  margin: 24px auto;
+}
+.mapinfotextbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  height: 43px;
+  width: 279px;
+}
+.infotitle {
+  height: 12px;
+  width: 279px;
+  font-family: "Rubik";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1.4583333730697632px;
+  text-align: center;
+  color: rgb(114, 114, 114);
+}
+.mapinfo {
+  height: 24px;
+  width: 279px;
+  font-family: "Rubik";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.1785714328289032px;
+  text-align: center;
+  color: rgba(44, 44, 44, 1);
+}
