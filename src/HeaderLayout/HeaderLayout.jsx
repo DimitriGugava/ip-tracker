@@ -4,11 +4,7 @@ import bluebackground from "../icons/bluebackground.svg";
 import arrow from "../icons/arrow.svg";
 import Map from "../HeaderLayout/map/map";
 import { useEffect, useState } from "react";
-import { useQuery } from "react-query";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import { useRef } from "react";
-import { PosAnimation } from "leaflet";
-import { map } from "leaflet";
+import bluebackgrounddesktop from "../icons/bluebackgrounddesktop.svg";
 
 const HeaderLayout = () => {
   const [address, setAddress] = useState(null);
@@ -52,18 +48,27 @@ const HeaderLayout = () => {
     setIpAddress(""); // after inputing a string or number input field emptys itself
     console.log("clicked");
   }
-
+  console.log(address);
   return (
     <>
       {address && (
         <div className="HeaderLayoutContainer">
           <img src={bluebackground} className="blueBackground" />
+          <img src={bluebackgrounddesktop} className="blueBackgrounddesktop" />
+
           <h1 className="headerTiTle">IP Address Tracker</h1>
           <div className="inputBox">
             <input
               type="text"
               className="inputOfAddress"
               placeholder="Search for any IP address or domain"
+              value={ipAddress}
+              onChange={(e) => setIpAddress(e.target.value)}
+            />
+            <input
+              type="text"
+              className="inputOfAddressDesktop"
+              placeholder="Search for any IP address or domain. e.g: 8.8.8.8 or Google.com"
               value={ipAddress}
               onChange={(e) => setIpAddress(e.target.value)}
             />
@@ -80,16 +85,19 @@ const HeaderLayout = () => {
               <a className="infotitle">IP ADDRESS</a>
               <div className="mapinfo">{address?.ip}</div>
             </div>
+            <div className="desktopLine"></div>
             <div className="mapinfotextbox">
               <a className="infotitle">LOCATION</a>
               <div className="mapinfo">
                 {address?.location.country}, {address?.location.region}
               </div>
             </div>
+            <div className="desktopLine"></div>
             <div className="mapinfotextbox">
               <a className="infotitle">TIMEZONE</a>
               <div className="mapinfo">{address?.location.timezone}</div>
             </div>
+            <div className="desktopLine"></div>
             <div className="mapinfotextbox">
               <a className="infotitle">ISP</a>
               <div className="mapinfo">{address?.isp}</div>

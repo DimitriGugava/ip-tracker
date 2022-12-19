@@ -42,7 +42,7 @@
   border-radius: 15px;
   border-style: none;
   font-family: "Rubik";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0px;
@@ -106,4 +106,168 @@
   letter-spacing: -0.1785714328289032px;
   text-align: center;
   color: rgba(44, 44, 44, 1);
+}
+
+@media only screen and (max-width: 1440px) {
+  .blueBackgrounddesktop {
+    display: none;
+  }
+  .desktopLine {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .HeaderLayoutContainer {
+    height: 800px;
+    width: 1440px;
+  }
+
+  .blueBackground {
+    display: none;
+  }
+
+  .blueBackgrounddesktop {
+    height: 280px;
+    width: 1440px;
+    z-index: -1;
+    position: absolute;
+    margin-top: 0px;
+  }
+  .headerTiTle {
+    font-family: "Rubik";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.2857142984867096px;
+    text-align: left;
+    height: 30px;
+    width: 282px;
+  }
+
+  .inputBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 58px;
+    width: 555px;
+
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+    margin: 29px auto;
+    z-index: 10;
+  }
+  .inputOfAddress {
+    display: flex;
+    display: none;
+    height: 21px;
+    width: 299px;
+    border-radius: 15px;
+    border-style: none;
+    font-family: "Rubik";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(44, 44, 44, 1);
+  }
+  .inputOfAddress:focus {
+    outline: none;
+  }
+
+  .inputButton {
+    margin-left: 195px;
+    height: 58px;
+    width: 58px;
+    left: 497px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 0px 15px 15px 0px;
+  }
+  .inputOfAddressDesktop {
+    display: flex;
+    height: 21px;
+    width: 500px;
+    border-radius: 15px;
+    border-style: none;
+    font-family: "Rubik";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(44, 44, 44, 1);
+    z-index: 10;
+  }
+  .inputOfAddressDesktop:focus {
+    outline: none;
+  }
+
+  .inputButton {
+    margin-left: 0px;
+    height: 58px;
+    width: 58px;
+
+    background: rgba(0, 0, 0, 1);
+    border-radius: 0px 15px 15px 0px;
+  }
+  .inputButton:hover {
+    cursor: pointer;
+    background: rgb(40, 40, 40);
+  }
+
+  .desktopLine {
+    border: 0.1px solid rgba(0, 0, 0, 1);
+    height: 75px;
+    width: 100px;
+
+    mix-blend-mode: normal;
+    opacity: 0.15;
+  }
+
+  .mapinfodisplaybox {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 161px;
+    width: 1110px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0984);
+    margin: -0px auto;
+  }
+  .mapinfotextbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: 43px;
+    width: 279px;
+    gap: 25px;
+  }
+  .infotitle {
+    height: 12px;
+    width: 279px;
+    margin-top: -20px;
+    font-family: "Rubik";
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 1.4583333730697632px;
+    text-align: center;
+    color: rgb(114, 114, 114);
+  }
+  .mapinfo {
+    height: 24px;
+    width: 279px;
+    font-family: "Rubik";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.1785714328289032px;
+    text-align: center;
+    color: rgba(44, 44, 44, 1);
+  }
 }
