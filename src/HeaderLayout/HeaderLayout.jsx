@@ -65,6 +65,13 @@ const HeaderLayout = () => {
               value={ipAddress}
               onChange={(e) => setIpAddress(e.target.value)}
             />
+            <button
+              className="inputButton"
+              onClick={handleSubmit}
+              autoComplete="off"
+            >
+              <img src={arrow} className="arrow" />
+            </button>
           </div>
           <div className="inputBoxDekstop">
             <input
