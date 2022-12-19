@@ -65,6 +65,8 @@ const HeaderLayout = () => {
               value={ipAddress}
               onChange={(e) => setIpAddress(e.target.value)}
             />
+          </div>
+          <div className="inputBoxDekstop">
             <input
               type="text"
               className="inputOfAddressDesktop"
